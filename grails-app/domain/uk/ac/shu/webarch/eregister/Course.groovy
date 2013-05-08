@@ -6,7 +6,8 @@ class Course {
   String courseName
   String courseCode
   String description
-  int myIntProp=1
+  
+int myIntProp=1
 
   Set classes
 
@@ -17,10 +18,4 @@ class Course {
   static hasMany = [classes: RegClass]
   static mappedBy = [classes: 'course']
 
-  static mapping = {
-    table 'course'
-    courseName column: 'course_name'
-    courseCode column: 'mapped_course_code'
-    description column: 'course_desc', type:'text'
-  }
 }

@@ -8,6 +8,7 @@ package uk.ac.shu.webarch.eregister
  * of a 1 to many relationship
  *
  */
+
 class RegClass {
 
   /* Class name */
@@ -23,7 +24,7 @@ class RegClass {
   Course course
 
   /* The set of students enrolled on this class */
-  Set enrolledSudents
+  Set enrolledStudents
   Set registrationSheets
 
   static hasMany = [

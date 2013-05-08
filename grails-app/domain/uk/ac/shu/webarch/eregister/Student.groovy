@@ -7,21 +7,12 @@ class Student {
   String notes
 
   
-  Set courses
+ Set studentRegister
+ Set enrolled
 
 
-  Set classAtts
-
- 
-  static hasMany = [
-    courses: Enrollment,
-    classAtts: RegisterEntry
-  ]
-
-  static mappedBy = [
-    courses:'student',
-    classAtts:'student'
-  ]
+	static hasMany=[studentRegister:RegisterEntry, enrolled:Enrollment ]
+	static mappedBy=[studentRegister:'student', enrolled:'student']
 
  
   static constraints = {
@@ -30,6 +21,7 @@ class Student {
   }
 
 static mapping = {
+  table 'enrollment'
    notes column: 'student_notes', type:'text'
 }
 }

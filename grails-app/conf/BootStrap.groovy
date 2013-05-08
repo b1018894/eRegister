@@ -12,9 +12,13 @@ class BootStrap {
 	def ian_instructor = Instructor.findByStaffId('646345d') ?: new Instructor(staffId:'646345d',name:'Ian Ibbotson').save();
 	def matthew_instructor = Instructor.findByStaffId('244354a') ?: new Instructor(staffId:'244354a',name:'Matthew Love').save();
 
-	/*def web_arch_course = Course.findByCourseCode('443343768') ?: new Course(courseCode:'443343768', 
+	def web_arch_course = Course.findByCourseCode('443343768') ?: new Course(courseCode:'443343768', 
                                                                           courseName:'WEb Architectures', 
-                                                                          description:'Headache for students').save();*/
+                                                                          description:'Headache for students').save();
+def EM_course = Course.findByCourseCode('443343768sa') ?: new Course(courseCode:'443343768', 
+                                                                          courseName:'WEb Architectures 2', 
+                                                                          description:'Headache for students').save();
+
 }
 
     def destroy = {

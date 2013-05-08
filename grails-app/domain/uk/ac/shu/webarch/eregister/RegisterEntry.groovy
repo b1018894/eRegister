@@ -5,8 +5,6 @@ class RegisterEntry {
 
   
   Student student
-
-  
   RegistrationSheet regSheet
 
 

@@ -12,8 +12,6 @@ class RegistrationSheet {
 
   Set signatories
 
-
-
   String notes
 
   static hasMany = [signatories:RegisterEntry]
