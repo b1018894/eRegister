@@ -16,12 +16,10 @@ class Student {
 
  
   static constraints = {
-    fullStudentName(nullable:false, blank:false,maxSize:256);
-    studentNumber(nullable:false, blank:false,maxSize:256);
+    fullStudentName(nullable:false, blank:false,maxSize:25);
+    studentNumber(nullable:false, blank:false,maxSize:25);
+    notes(nullable:true, blank:true,maxSize:256);
   }
 
-static mapping = {
-  table 'enrollment'
-   notes column: 'student_notes', type:'text'
-}
+
 }

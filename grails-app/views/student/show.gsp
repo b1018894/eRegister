@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${studentInstance?.notes}">
+				<li class="fieldcontain">
+					<span id="notes-label" class="property-label"><g:message code="student.notes.label" default="Notes" /></span>
+					
+						<span class="property-value" aria-labelledby="notes-label"><g:fieldValue bean="${studentInstance}" field="notes"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${studentInstance?.enrolled}">
 				<li class="fieldcontain">
 					<span id="enrolled-label" class="property-label"><g:message code="student.enrolled.label" default="Enrolled" /></span>
@@ -48,15 +57,6 @@
 						<g:each in="${studentInstance.enrolled}" var="e">
 						<span class="property-value" aria-labelledby="enrolled-label"><g:link controller="enrollment" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${studentInstance?.notes}">
-				<li class="fieldcontain">
-					<span id="notes-label" class="property-label"><g:message code="student.notes.label" default="Notes" /></span>
-					
-						<span class="property-value" aria-labelledby="notes-label"><g:fieldValue bean="${studentInstance}" field="notes"/></span>
 					
 				</li>
 				</g:if>

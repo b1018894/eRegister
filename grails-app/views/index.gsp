@@ -5,13 +5,15 @@
 		<title>eRegister System</title
 	</head>
 	<body>
-	<p>THis is the eRegister application</p>
-	<p>
-
-<g:link controller="Instructor">Manage Instructos</g:link>
-<g:link controller="Course">Course Instructos</g:link>
-<g:link controller="Student">Student Instructos</g:link>
-
-</p>
+	<h1 style="text-align:center; padding:5px">THis is the eRegister application</h1>
+	
+<br />
+<div style="text-align:center; padding:5px">
+<p><g:link controller="Instructor">Manage Instructors</g:link></p>
+<p><g:link controller="Course">Manage Courses</g:link></p>
+<p><g:link controller="Student">Manage Student</g:link></p>
+<p><g:link controller="Enrollment">Enrol Students</g:link></p>
+<p><g:link controller="RegistrationSheet">Registration Area</g:link></p>
+</div>
 	</body>
 </html>
