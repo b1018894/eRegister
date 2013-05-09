@@ -1,4 +1,4 @@
-/*In this particula controller it has the feature to view the website through json or xml by changing the link and adding .json or .xml to convert it to these formats*/
+/*In this particular controller it has the feature to view the website through json or xml by changing the link and adding .json or .xml to convert it to these formats*/
 
 package uk.ac.shu.webarch.eregister
 
