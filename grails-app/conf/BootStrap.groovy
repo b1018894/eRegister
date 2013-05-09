@@ -8,6 +8,8 @@ class BootStrap {
   def init = { servletContext ->
 
     println("BootStrap::init");
+
+/*Adds the data to instructor*/
     
     def ian_instructor = Instructor.findByStaffId('646345d') ?: new Instructor(staffId:'646345d', name:'Ian Ibbotson').save();
     def matthew_instructor = Instructor.findByStaffId('253425') ?: new Instructor(staffId:'253425', name:'Matthew Love').save();
@@ -16,11 +18,12 @@ class BootStrap {
                                                                             courseName:'Web Architectures', 
                                                                             description:'Headache for students').save();
 
- 
+ /*Adds the data to course*/
+
     def im_course = Course.findByCourseCode('443343d4') ?: new Course(courseCode:'443343d4', 
                                                                             courseName:'Interactive Multimedia', 
                                                                             description:'Interactive Multimedia').save();
-
+ /*Adds the data to regCLas*/
     def monday_pm_class = RegClass.findByCourseAndCode(web_arch_course, 'WebArchOne') ?: 
                   new RegClass(name:'Web Architectures Group One',
                                code:'WebArchOne',
@@ -39,7 +42,7 @@ class BootStrap {
                                classInstructor:matthew_instructor,
                                course:im_course).save();
 
-
+ /*Adds the data to Student*/
     def student_a = Student.findByStudentNumber('A111') ?:
                   new Student(studentNumber:'A111', fullStudentName:'Student Fred', notes:'Student Fred Notes').save();
 
@@ -63,6 +66,8 @@ class BootStrap {
 
     println("Find or create by...")
 
+ /*Adds the data to Enrollments*/
+
     def student_a_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_a,monday_pm_class)
 
     def student_b_web_arch = Enrollment.findOrSaveByStudentAndRegClass(student_b,monday_pm_class)
@@ -77,6 +82,7 @@ class BootStrap {
 
     def student_g_web_arch = Enrollment.findOrSaveByStudentAndRegClass(student_g,tuesday_pm_class)
 
+/*Message to display which means it has been successful*/
     println("Done...");
 
   }
