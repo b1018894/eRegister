@@ -1,4 +1,4 @@
-eRegister
+<h1>eRegister</h1>
 
 The aim of this project is to explore  various aspects of developing a web application, here are the following methods of services use to create this system:
 
